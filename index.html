@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="theme-color" content="#3D2B1F">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>Team Roping Videos — The Best Team Roping Video & Podcast Directory</title>
+<meta name="description" content="The ultimate team roping media directory. Video channels, audio podcasts, and video podcasts covering team roping, clinics, jackpots, horse training, and the roping lifestyle.">
+<meta property="og:title" content="Team Roping Videos — Video & Podcast Directory">
+<meta property="og:description" content="The best team roping video channels, podcasts, and video podcasts all in one place.">
+<meta property="og:url" content="https://www.teamropingvideos.com">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://www.teamropingvideos.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #1a1008;
+  --surface: #231508;
+  --card: #2a1a0a;
+  --card-hover: #321f0c;
+  --border: rgba(196,162,101,0.15);
+  --border-hover: rgba(196,162,101,0.4);
+  --rope: #C4A265;
+  --rope-light: #D4BA85;
+  --rope-dark: #8B6E3C;
+  --cream: #F5EDD8;
+  --text: #E8D5B0;
+  --text-muted: #8B7355;
+  --text-dim: #6B5535;
+  --rust: #C4533A;
+  --sage: #5B8C4A;
+  --leather: #8B5E3C;
+  --radius: 10px;
+  --radius-lg: 14px;
+  --shadow: 0 2px 12px rgba(0,0,0,0.4);
+  --shadow-hover: 0 6px 24px rgba(0,0,0,0.6);
+}
+body {
+  font-family: 'Outfit', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── TOP BAR ── */
+.topbar {
+  background: #0f0804;
+  border-bottom: 1px solid var(--border);
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.topbar-brand {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--cream);
+  letter-spacing: -0.5px;
+}
+.topbar-brand span { color: var(--rope); }
+.topbar-sub {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.submit-btn {
+  background: var(--rope);
+  color: #0f0804;
+  border: none;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 7px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+.submit-btn:hover { background: var(--rope-light); }
+
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(160deg, #0f0804 0%, #1f1008 40%, #2a1a08 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 36px 20px 28px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(196,162,101,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-site-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--rope);
+  margin-bottom: 10px;
+}
+.hero h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--cream);
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+.hero h1 span { color: var(--rope); }
+.hero p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  max-width: 480px;
+  margin: 0 auto 20px;
+  line-height: 1.5;
+}
+
+/* Banner ad */
+#heroBanner { margin: 0 auto 20px; max-width: 320px; width: 90%; cursor: pointer; }
+#heroBanner img { width: 100%; height: auto; display: block; border-radius: 6px; }
+
+/* Stats */
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+.hero-stat { text-align: center; }
+.stat-num {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--rope);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
+
+/* ── CONTROLS ── */
+.controls {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 16px;
+  position: sticky;
+  top: 49px;
+  z-index: 90;
+}
+.search-wrap {
+  position: relative;
+  margin-bottom: 10px;
+}
+.search-wrap input {
+  width: 100%;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px 10px 38px;
+  color: var(--cream);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+}
+.search-wrap input::placeholder { color: var(--text-dim); }
+.search-wrap input:focus { outline: none; border-color: var(--rope-dark); }
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-dim);
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+/* Filter chips */
+.chip-row {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  margin-bottom: 8px;
+}
+.chip-row::-webkit-scrollbar { display: none; }
+.chip {
+  flex-shrink: 0;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 5px 13px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.15s;
+  white-space: nowrap;
+}
+.chip:hover, .chip.active {
+  background: var(--rope);
+  color: #0f0804;
+  border-color: var(--rope);
+}
+.chip-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-dim);
+  margin-bottom: 5px;
+}
+
+/* Showing count */
+#showingCount {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-top: 4px;
+}
+
+/* ── MAIN ── */
+.main { padding: 20px 16px 80px; max-width: 900px; margin: 0 auto; }
+
+/* ── FEATURED LABEL ── */
+.section-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--rope-dark);
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── FEATURED CARD ── */
+.featured-grid { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+.featured-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  box-shadow: var(--shadow);
+  transition: 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.featured-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--rope);
+}
+.featured-card:hover {
+  background: var(--card-hover);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-1px);
+}
+.featured-tag {
+  position: absolute;
+  top: 10px; right: 10px;
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: rgba(196,162,101,0.15);
+  color: var(--rope);
+  padding: 2px 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(196,162,101,0.3);
+}
+.featured-art {
+  width: 72px;
+  height: 72px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: var(--surface);
+}
+.featured-body { flex: 1; min-width: 0; }
+.featured-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 2px;
+  padding-right: 60px;
+}
+.featured-host {
+  font-size: 0.78rem;
+  color: var(--rope);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.featured-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.card-links { display: flex; gap: 7px; flex-wrap: wrap; align-items: center; }
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.15s;
+  border: 1px solid transparent;
+}
+.link-yt { background: rgba(255,0,0,0.15); color: #ff6b6b; border-color: rgba(255,0,0,0.25); }
+.link-yt:hover { background: rgba(255,0,0,0.25); }
+.link-spotify { background: rgba(30,215,96,0.12); color: #1ed760; border-color: rgba(30,215,96,0.25); }
+.link-spotify:hover { background: rgba(30,215,96,0.22); }
+.link-apple { background: rgba(252,60,68,0.12); color: #fc3c44; border-color: rgba(252,60,68,0.25); }
+.link-apple:hover { background: rgba(252,60,68,0.22); }
+.link-web { background: rgba(196,162,101,0.12); color: var(--rope); border-color: rgba(196,162,101,0.25); }
+.link-web:hover { background: rgba(196,162,101,0.22); }
+
+/* Type badge */
+.type-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+.type-video { background: rgba(255,80,80,0.18); color: #ff8080; }
+.type-audio { background: rgba(196,162,101,0.18); color: var(--rope-light); }
+.type-vidpod { background: rgba(91,140,74,0.18); color: #8ecb7a; }
+
+/* Cat badge */
+.cat-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.62rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: rgba(139,94,60,0.25);
+  color: var(--leather);
+  color: #c49070;
+}
+
+/* ── REGULAR GRID ── */
+.podcast-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+@media (max-width: 600px) { .podcast-grid { grid-template-columns: 1fr; } }
+
+.pod-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: var(--shadow);
+  transition: 0.2s;
+  cursor: pointer;
+}
+.pod-card:hover {
+  background: var(--card-hover);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-1px);
+}
+.pod-card-top { display: flex; gap: 10px; align-items: flex-start; }
+.pod-art {
+  width: 52px;
+  height: 52px;
+  border-radius: 7px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: var(--surface);
+}
+.pod-art-emoji {
+  width: 52px;
+  height: 52px;
+  border-radius: 7px;
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+.pod-info { flex: 1; min-width: 0; }
+.pod-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--cream);
+  line-height: 1.3;
+  margin-bottom: 2px;
+}
+.pod-host {
+  font-size: 0.72rem;
+  color: var(--rope);
+  font-weight: 600;
+}
+.pod-desc {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.pod-footer { display: flex; gap: 5px; flex-wrap: wrap; }
+
+/* ── AD CARD ── */
+.ad-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+}
+.ad-card img { width: 100%; height: auto; display: block; }
+.ad-label {
+  font-size: 0.6rem;
+  color: var(--text-dim);
+  text-align: right;
+  padding: 3px 6px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ── NO RESULTS ── */
+#noResults {
+  display: none;
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-muted);
+  grid-column: 1 / -1;
+}
+#noResults .no-icon { font-size: 2.5rem; margin-bottom: 10px; }
+
+/* ── DETAIL MODAL ── */
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 500;
+  align-items: flex-end;
+  justify-content: center;
+}
+.overlay.open { display: flex; }
+@media (min-width: 600px) { .overlay { align-items: center; } }
+.detail-sheet {
+  background: #1f1008;
+  border: 1px solid var(--border);
+  border-radius: 16px 16px 0 0;
+  width: 100%;
+  max-width: 560px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 24px 20px 40px;
+  position: relative;
+  animation: slideUp 0.25s ease;
+}
+@media (min-width: 600px) { .detail-sheet { border-radius: 16px; } }
+@keyframes slideUp { from { transform: translateY(40px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+.detail-close {
+  position: absolute;
+  top: 14px; right: 14px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+.detail-art {
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 14px;
+  background: var(--surface);
+}
+.detail-art-emoji {
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.8rem;
+  margin-bottom: 14px;
+}
+.detail-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--cream);
+  margin-bottom: 4px;
+}
+.detail-host {
+  font-size: 0.88rem;
+  color: var(--rope);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.detail-badges { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+.detail-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+.detail-links { display: flex; flex-direction: column; gap: 8px; }
+.detail-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  text-decoration: none;
+  color: var(--cream);
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: 0.15s;
+}
+.detail-link:hover { border-color: var(--border-hover); background: var(--card-hover); }
+.detail-link-icon { font-size: 1.2rem; }
+
+/* ── SUBMIT MODAL ── */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 600;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.modal-overlay.open { display: flex; }
+.modal-box {
+  background: #1f1008;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px 20px;
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.modal-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--cream);
+  margin-bottom: 6px;
+}
+.modal-sub {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+.form-row { margin-bottom: 14px; }
+.form-row label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--rope);
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.form-row input, .form-row select, .form-row textarea {
+  width: 100%;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 9px 12px;
+  color: var(--cream);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.88rem;
+}
+.form-row textarea { height: 80px; resize: vertical; }
+.form-row input:focus, .form-row select:focus, .form-row textarea:focus {
+  outline: none;
+  border-color: var(--rope-dark);
+}
+.form-row select option { background: #1f1008; }
+.modal-footer { display: flex; gap: 10px; margin-top: 18px; }
+.btn-cancel {
+  flex: 1;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn-submit {
+  flex: 2;
+  background: var(--rope);
+  border: none;
+  color: #0f0804;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn-submit:hover { background: var(--rope-light); }
+
+/* ── FOOTER ── */
+footer {
+  background: #0f0804;
+  border-top: 1px solid var(--border);
+  padding: 24px 20px;
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  line-height: 1.8;
+}
+footer a { color: var(--rope-dark); text-decoration: none; }
+footer a:hover { color: var(--rope); }
+
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.6rem; }
+  .topbar-sub { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<header class="topbar">
+  <div>
+    <div class="topbar-brand">Team<span>Roping</span>Videos</div>
+    <div class="topbar-sub">Video &amp; Podcast Directory</div>
+  </div>
+  <div class="topbar-right">
+    <button class="submit-btn" onclick="openSubmit()">+ Submit</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-site-title">Team Roping Media Hub</div>
+  <h1>The Best Team Roping <span>Videos &amp; Podcasts</span></h1>
+  <p>Video channels, audio podcasts, and video podcasts covering team roping, clinics, jackpots, and the roping lifestyle.</p>
+
+  <div id="heroBanner" onclick="window.open(bannerAds[currentBanner].url,'_blank')">
+    <img id="bannerImg" src="https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/podcastcorral-black-angus/public" alt="Sponsor" loading="lazy" width="320" height="100">
+  </div>
+  <script>
+  var bannerAds = [
+    {img:"https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/podcastcorral-black-angus/public", url:"https://www.blackangus.com", alt:"Black Angus Steakhouse"},
+    {img:"https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/podcastcorral-k4-ranch/public", url:"https://www.k4ranch.com", alt:"K4 Ranch"},
+  ];
+  var currentBanner = 0;
+  function rotateBanner() {
+    currentBanner = (currentBanner + 1) % bannerAds.length;
+    var img = document.getElementById('bannerImg');
+    if (img) { img.src = bannerAds[currentBanner].img; img.alt = bannerAds[currentBanner].alt; }
+  }
+  setInterval(rotateBanner, 5000);
+  </script>
+
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="stat-num" id="stat-total">42</div>
+      <div class="stat-label">Shows &amp; Channels</div>
+    </div>
+    <div class="hero-stat">
+      <div class="stat-num">3</div>
+      <div class="stat-label">Media Types</div>
+    </div>
+    <div class="hero-stat">
+      <div class="stat-num">10</div>
+      <div class="stat-label">Categories</div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTROLS -->
+<div class="controls">
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="searchInput" placeholder="Search shows, hosts, topics..." oninput="renderAll()" autocomplete="off">
+  </div>
+
+  <div class="chip-label">Media Type</div>
+  <div class="chip-row" id="typeChips">
+    <button class="chip active" data-type="all" onclick="setType(this,'all')">All Types</button>
+    <button class="chip" data-type="video" onclick="setType(this,'video')">🎬 Video</button>
+    <button class="chip" data-type="audio" onclick="setType(this,'audio')">🎙️ Audio Podcast</button>
+    <button class="chip" data-type="vidpod" onclick="setType(this,'vidpod')">📹 Video Podcast</button>
+  </div>
+
+  <div class="chip-label" style="margin-top:8px;">Category</div>
+  <div class="chip-row" id="catChips">
+    <button class="chip active" data-cat="all" onclick="setCat(this,'all')">All</button>
+    <button class="chip" data-cat="roping" onclick="setCat(this,'roping')">Team Roping</button>
+    <button class="chip" data-cat="clinic" onclick="setCat(this,'clinic')">Clinics</button>
+    <button class="chip" data-cat="highlights" onclick="setCat(this,'highlights')">Jackpot Highlights</button>
+    <button class="chip" data-cat="training" onclick="setCat(this,'training')">Horse Training</button>
+    <button class="chip" data-cat="breakaway" onclick="setCat(this,'breakaway')">Breakaway</button>
+    <button class="chip" data-cat="youth" onclick="setCat(this,'youth')">Youth</button>
+    <button class="chip" data-cat="lifestyle" onclick="setCat(this,'lifestyle')">Lifestyle</button>
+    <button class="chip" data-cat="business" onclick="setCat(this,'business')">Industry</button>
+    <button class="chip" data-cat="rodeo" onclick="setCat(this,'rodeo')">Rodeo</button>
+    <button class="chip" data-cat="ranch" onclick="setCat(this,'ranch')">Ranch</button>
+  </div>
+
+  <div id="showingCount">Showing all shows &amp; channels</div>
+</div>
+
+<!-- MAIN -->
+<main class="main">
+  <div id="featuredLabel" class="section-label">⭐ Featured</div>
+  <div id="featuredGrid" class="featured-grid"></div>
+
+  <div id="regularLabel" class="section-label">All Shows &amp; Channels</div>
+  <div id="podcastGrid" class="podcast-grid">
+    <div id="noResults">
+      <div class="no-icon">🤠</div>
+      <div>No results found. Try a different search.</div>
+    </div>
+  </div>
+</main>
+
+<!-- DETAIL OVERLAY -->
+<div class="overlay" id="detailOverlay" onclick="closeDetail(event)">
+  <div class="detail-sheet" id="detailSheet">
+    <button class="detail-close" onclick="closeDetailBtn()">✕</button>
+    <div id="detailContent"></div>
+  </div>
+</div>
+
+<!-- SUBMIT MODAL -->
+<div class="modal-overlay" id="submitModal" onclick="closeSubmit(event)">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <div class="modal-title">Submit a Show or Channel</div>
+    <div class="modal-sub">Free listing — no pay-to-play, ever. We review all submissions within 48 hours.</div>
+    <div class="form-row">
+      <label>Show / Channel Name *</label>
+      <input type="text" id="f-name" placeholder="e.g. The Roping Report">
+    </div>
+    <div class="form-row">
+      <label>Host / Creator</label>
+      <input type="text" id="f-host" placeholder="Your name or channel name">
+    </div>
+    <div class="form-row">
+      <label>Media Type *</label>
+      <select id="f-type">
+        <option value="">Select type...</option>
+        <option>🎬 Video Channel</option>
+        <option>🎙️ Audio Podcast</option>
+        <option>📹 Video Podcast</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <label>Category</label>
+      <select id="f-cat">
+        <option>Team Roping</option>
+        <option>Clinics / Instruction</option>
+        <option>Jackpot Highlights</option>
+        <option>Horse Training</option>
+        <option>Breakaway Roping</option>
+        <option>Youth</option>
+        <option>Lifestyle</option>
+        <option>Industry / Business</option>
+        <option>Rodeo</option>
+        <option>Ranch</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <label>YouTube URL</label>
+      <input type="url" id="f-yt" placeholder="https://youtube.com/...">
+    </div>
+    <div class="form-row">
+      <label>Spotify / Apple / Website URL</label>
+      <input type="url" id="f-other" placeholder="https://...">
+    </div>
+    <div class="form-row">
+      <label>Short Description</label>
+      <textarea id="f-desc" placeholder="What is this show / channel about?"></textarea>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-cancel" onclick="closeSubmitBtn()">Cancel</button>
+      <button class="btn-submit" onclick="submitForm()">Submit →</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div style="font-size:1rem;font-weight:700;color:var(--rope);margin-bottom:6px;">TeamRopingVideos.com</div>
+  <div>The team roping media directory — video, audio &amp; video podcasts.</div>
+  <div style="margin-top:8px;">
+    A <a href="https://www.bridleandbit.com" target="_blank">Bridle &amp; Bit Magazine</a> property &nbsp;·&nbsp;
+    <a href="https://www.teamroping.ai" target="_blank">TeamRoping.ai</a>
+  </div>
+</footer>
+
+<script>
+// ── DATA ──
+const SHOWS = [
+  // FEATURED — VIDEO CHANNELS
+  {
+    id: 1, featured: true,
+    title: "Cactus Ropes TV",
+    host: "Cactus Ropes",
+    type: "video",
+    category: "roping",
+    catLabel: "Team Roping",
+    emoji: "🎬",
+    desc: "The official YouTube channel of Cactus Ropes — world's leading team roping rope manufacturer. Features pro ropers, tips, jackpot highlights, and behind-the-scenes content from the biggest events in team roping.",
+    youtube: "https://www.youtube.com/@CactusRopes",
+    website: "https://www.cactusropes.com",
+    artwork: ""
+  },
+  {
+    id: 2, featured: true,
+    title: "Classic Ropes",
+    host: "Classic Ropes",
+    type: "video",
+    category: "roping",
+    catLabel: "Team Roping",
+    emoji: "🎬",
+    desc: "Classic Ropes' official channel featuring world champions, product features, roping clinics, and competitive highlights from the WSTR, BFI, and major jackpots nationwide.",
+    youtube: "https://www.youtube.com/@ClassicRopes",
+    website: "https://www.classicropes.com",
+    artwork: ""
+  },
+  {
+    id: 3, featured: true,
+    title: "X-Treme Team Roping",
+    host: "X-Treme Roping",
+    type: "video",
+    category: "highlights",
+    catLabel: "Jackpot Highlights",
+    emoji: "🎬",
+    desc: "Official coverage of the X-Treme Team Roping circuit — one of the largest team roping organizations in the country. Live event coverage, highlights, results, and behind-the-chutes access from major ropings.",
+    youtube: "https://www.youtube.com/@XtremeTeamRoping",
+    website: "https://xtremeroping.com",
+    artwork: ""
+  },
+  {
+    id: 4, featured: true,
+    title: "The Score with Trevor Brazile",
+    host: "Trevor Brazile",
+    type: "vidpod",
+    category: "roping",
+    catLabel: "Team Roping",
+    emoji: "📹",
+    desc: "23-time world champion Trevor Brazile sits down with the top competitors, trainers, and personalities in the roping and rodeo world. Raw conversations about competition, horsemanship, and the life of a professional cowboy.",
+    youtube: "https://www.youtube.com/@TheScorepodcast",
+    spotify: "https://open.spotify.com/show/thescore",
+    apple: "https://podcasts.apple.com/us/podcast/the-score",
+    artwork: ""
+  },
+  // FEATURED — VIDEO PODCASTS
+  {
+    id: 5, featured: true,
+    title: "Rodeo Time with Dale Brisby",
+    host: "Dale Brisby",
+    type: "vidpod",
+    category: "lifestyle",
+    catLabel: "Lifestyle",
+    emoji: "📹",
+    desc: "The most entertaining man in rodeo. Dale Brisby and crew bring the lifestyle, laughs, and real talk from the roping pen to the road in this wildly popular video podcast.",
+    youtube: "https://www.youtube.com/@DaleBrisby",
+    spotify: "https://open.spotify.com/show/rodeotimedale",
+    artwork: ""
+  },
+
+  // VIDEO CHANNELS
+  {
+    id: 10,
+    title: "WSTR — World Series of Team Roping",
+    host: "WSTR",
+    type: "video",
+    category: "roping",
+    catLabel: "Team Roping",
+    emoji: "🎬",
+    desc: "Official World Series of Team Roping channel. Event coverage, draw results, highlights, and competitor profiles from the most prestigious team roping series in the world.",
+    youtube: "https://www.youtube.com/@WSTRoping",
+    website: "https://wstroping.com",
+    artwork: ""
+  },
+  {
+    id: 11,
+    title: "Bob Feist Invitational",
+    host: "BFI",
+    type: "video",
+    category: "roping",
+    catLabel: "Team Roping",
+    emoji: "🎬",
+    desc: "Official coverage of the Bob Feist Invitational — the richest team roping in the world. Live streams, highlights, and competitor interviews from the annual Reno event.",
+    youtube: "https://www.youtube.com/@BobFeistInvitational",
+    website: "https://bfiweek.com",
+    artwork: ""
+  },
+  {
+    id: 12,
+    title: "Priefert Ranch Equipment",
+    host: "Priefert",
+    type: "video",
+    category: "roping",
+    catLabel: "Team Roping",
+    emoji: "🎬",
+    desc: "Priefert's YouTube channel featuring sponsored athletes, arena equipment, roping clinics, and event sponsorships. Heavy team roping content with top professionals.",
+    youtube: "https://www.youtube.com/@PriefertRanchEquipment",
+    website: "https://www.priefert.com",
+    artwork: ""
+  },
+  {
+    id: 13,
+    title: "Hooey",
+    host: "Hooey",
+    type: "video",
+    category: "lifestyle",
+    catLabel: "Lifestyle",
+    emoji: "🎬",
+    desc: "The official Hooey channel — the brand of team roping and western lifestyle. Event coverage, athlete features, and the culture of team roping from one of the sport's biggest sponsors.",
+    youtube: "https://www.youtube.com/@HooeyBrand",
+    website: "https://www.hooey.com",
+    artwork: ""
+  },
+  {
+    id: 14,
+    title: "Jake Barnes Roping",
+    host: "Jake Barnes",
+    type: "video",
+    category: "clinic",
+    catLabel: "Clinics",
+    emoji: "🎬",
+    desc: "Seven-time world champion header Jake Barnes shares instruction, tips, and insight for headers at every level. Fundamentals, strategy, and live roping analysis from one of the sport's all-time greats.",
+    youtube: "https://www.youtube.com/@JakeBarnasRoping",
+    website: "https://jakebarnes.com",
+    artwork: ""
+  },
+  {
+    id: 15,
+    title: "Clay O'Brien Cooper",
+    host: "Clay O'Brien Cooper",
+    type: "video",
+    category: "clinic",
+    catLabel: "Clinics",
+    emoji: "🎬",
+    desc: "World champion heeler Clay O'Brien Cooper's clinic and instruction channel. Heeling fundamentals, horse selection, and the details that separate good heelers from great ones.",
+    youtube: "https://www.youtube.com/@ClayOBrienCooper",
+    website: "",
+    artwork: ""
+  },
+  {
+    id: 16,
+    title: "Roping.com",
+    host: "Roping.com",
+    type: "video",
+    category: "roping",
+    catLabel: "Team Roping",
+    emoji: "🎬",
+    desc: "The internet's home for team roping. Event videos, instructional content, jackpot highlights, and news from across the team roping world.",
+    youtube: "https://www.youtube.com/@RopingCom",
+    website: "https://www.roping.com",
+    artwork: ""
+  },
+  {
+    id: 17,
+    title: "Resistol Hats",
+    host: "Resistol",
+    type: "video",
+    category: "lifestyle",
+    catLabel: "Lifestyle",
+    emoji: "🎬",
+    desc: "Resistol's official channel featuring sponsored athletes including top team ropers, rodeo coverage, and the western lifestyle content that defines the brand.",
+    youtube: "https://www.youtube.com/@Resistol",
+    website: "https://www.resistol.com",
+    artwork: ""
+  },
+  {
+    id: 18,
+    title: "Frontier Roping",
+    host: "Frontier Roping",
+    type: "video",
+    category: "highlights",
+    catLabel: "Jackpot Highlights",
+    emoji: "🎬",
+    desc: "Jackpot highlights, short round coverage, and event results from major ropings across the Southwest. Fast-cut competition footage for ropers who want to see the runs.",
+    youtube: "https://www.youtube.com/@FrontierRoping",
+    website: "",
+    artwork: ""
+  },
+  {
+    id: 19,
+    title: "Lari Dee Guy",
+    host: "Lari Dee Guy",
+    type: "video",
+    category: "breakaway",
+    catLabel: "Breakaway",
+    emoji: "🎬",
+    desc: "Multiple world champion breakaway roper Lari Dee Guy shares instruction, event coverage, and the life of a professional competitor. Essential viewing for breakaway ropers.",
+    youtube: "https://www.youtube.com/@LariDeeGuy",
+    website: "",
+    artwork: ""
+  },
+  {
+    id: 20,
+    title: "Stran Smith Roping",
+    host: "Stran Smith",
+    type: "video",
+    category: "clinic",
+    catLabel: "Clinics",
+    emoji: "🎬",
+    desc: "World champion heeler Stran Smith shares the heeling techniques, horse training methods, and competitive mindset that made him one of the best heelers of his generation.",
+    youtube: "https://www.youtube.com/@StranSmith",
+    website: "",
+    artwork: ""
+  },
+  {
+    id: 21,
+    title: "Team Roping Journal",
+    host: "Team Roping Journal",
+    type: "video",
+    category: "roping",
+    catLabel: "Team Roping",
+    emoji: "🎬",
+    desc: "The official video channel of Team Roping Journal magazine. Interviews, event coverage, how-to content, and news from across the team roping world.",
+    youtube: "https://www.youtube.com/@TeamRopingJournal",
+    website: "https://teamropingjournal.com",
+    artwork: ""
+  },
+  {
+    id: 22,
+    title: "Cowboy Channel",
+    host: "Cowboy Channel",
+    type: "video",
+    category: "rodeo",
+    catLabel: "Rodeo",
+    emoji: "🎬",
+    desc: "The Cowboy Channel — home of ProRodeo, team roping, and the western lifestyle on television. Highlights, live events, and original content from the sport's premier network.",
+    youtube: "https://www.youtube.com/@TheCowboyChannel",
+    website: "https://www.cowboychannel.com",
+    artwork: ""
+  },
+  {
+    id: 23,
+    title: "High Desert Roping",
+    host: "High Desert Roping",
+    type: "video",
+    category: "highlights",
+    catLabel: "Jackpot Highlights",
+    emoji: "🎬",
+    desc: "Jackpot highlight coverage from Nevada, California, and the high desert Southwest. Short round action, winner interviews, and run-by-run coverage of major events.",
+    youtube: "https://www.youtube.com/@HighDesertRoping",
+    website: "",
+    artwork: ""
+  },
+  {
+    id: 24,
+    title: "Youth Roping Nation",
+    host: "Youth Roping Nation",
+    type: "video",
+    category: "youth",
+    catLabel: "Youth",
+    emoji: "🎬",
+    desc: "Dedicated to the next generation of team ropers. Junior jackpot highlights, youth event coverage, coaching tips for young ropers, and inspiration for kids who love to rope.",
+    youtube: "https://www.youtube.com/@YouthRopingNation",
+    website: "",
+    artwork: ""
+  },
+  {
+    id: 25,
+    title: "Working Ranch TV",
+    host: "Working Ranch",
+    type: "video",
+    category: "ranch",
+    catLabel: "Ranch",
+    emoji: "🎬",
+    desc: "Ranch roping, working cowboy skills, and the real horsemanship of the working ranch. Branding, sorting, doctoring, and big loop roping from actual working operations.",
+    youtube: "https://www.youtube.com/@WorkingRanchTV",
+    website: "https://workingranchmagazine.com",
+    artwork: ""
+  },
+
+  // AUDIO PODCASTS
+  {
+    id: 30,
+    title: "The Breakdown Podcast",
+    host: "Erich Rogers & Paden Bray",
+    type: "audio",
+    category: "roping",
+    catLabel: "Team Roping",
+    emoji: "🎙️",
+    desc: "World champions Erich Rogers and Paden Bray break down the mental and physical game of team roping — training philosophies, competition mindset, and the grind of the professional roping lifestyle.",
+    spotify: "https://open.spotify.com/show/breakdownpodcast",
+    apple: "https://podcasts.apple.com/us/podcast/the-breakdown",
+    artwork: ""
+  },
+  {
+    id: 31,
+    title: "The Horsemanship Podcast",
+    host: "Craig Cameron",
+    type: "audio",
+    category: "training",
+    catLabel: "Horse Training",
+    emoji: "🎙️",
+    desc: "Cowboy clinician Craig Cameron covers horsemanship fundamentals, rope horse training, and the deep connection between horse and rider. Essential listening for anyone building a roping horse.",
+    spotify: "https://open.spotify.com/show/horsepodcast",
+    apple: "https://podcasts.apple.com/horsemanship",
+    artwork: ""
+  },
+  {
+    id: 32,
+    title: "The Roping Wire",
+    host: "Roping Wire",
+    type: "audio",
+    category: "roping",
+    catLabel: "Team Roping",
+    emoji: "🎙️",
+    desc: "News, results, and insider conversation from the team roping world. Event recaps, draws, standings updates, and interviews with the competitors making headlines.",
+    spotify: "https://open.spotify.com/show/ropingwire",
+    website: "https://www.ropingwire.com",
+    artwork: ""
+  },
+  {
+    id: 33,
+    title: "Rope Horse Matters",
+    host: "Various Hosts",
+    type: "audio",
+    category: "training",
+    catLabel: "Horse Training",
+    emoji: "🎙️",
+    desc: "Deep dives into the science and art of building elite rope horses. Veterinarians, trainers, and champion ropers discuss equine fitness, biomechanics, and what it takes to develop a world-class partner.",
+    spotify: "https://open.spotify.com/show/ropehorsematters",
+    apple: "https://podcasts.apple.com/ropehorse",
+    artwork: ""
+  },
+  {
+    id: 34,
+    title: "The Cowboys of Faith Podcast",
+    host: "Cowboys of Faith",
+    type: "audio",
+    category: "lifestyle",
+    catLabel: "Lifestyle",
+    emoji: "🎙️",
+    desc: "Faith, family, and the western lifestyle. Conversations with ropers, rodeo cowboys, and western industry leaders about what drives them beyond the arena.",
+    spotify: "https://open.spotify.com/show/cowboysoffaith",
+    apple: "https://podcasts.apple.com/cowboysoffaith",
+    artwork: ""
+  },
+  {
+    id: 35,
+    title: "The Equestrian Business Podcast",
+    host: "Various",
+    type: "audio",
+    category: "business",
+    catLabel: "Industry",
+    emoji: "🎙️",
+    desc: "Business strategy, marketing, and entrepreneurship in the horse and western industry. Essential listening for arena owners, ropers running operations, and western brand builders.",
+    spotify: "https://open.spotify.com/show/equestrianbiz",
+    apple: "https://podcasts.apple.com/equestrianbiz",
+    artwork: ""
+  },
+
+  // VIDEO PODCASTS
+  {
+    id: 40,
+    title: "Raw with Clinton Anderson",
+    host: "Clinton Anderson",
+    type: "vidpod",
+    category: "training",
+    catLabel: "Horse Training",
+    emoji: "📹",
+    desc: "World-renowned clinician Clinton Anderson goes unfiltered on horsemanship, mindset, business, and life. Raw, direct, and deeply educational — the real story behind one of the industry's most successful horsemen.",
+    youtube: "https://www.youtube.com/@ClintonAndersonDownunder",
+    spotify: "https://open.spotify.com/show/clintonanderson",
+    apple: "https://podcasts.apple.com/clintonanderson",
+    artwork: ""
+  },
+  {
+    id: 41,
+    title: "Tom McCutcheon Reining & Roping",
+    host: "Tom McCutcheon",
+    type: "vidpod",
+    category: "training",
+    catLabel: "Horse Training",
+    emoji: "📹",
+    desc: "NRCHA and NRHA champion Tom McCutcheon on building dual-purpose horses — the training, conditioning, and horsemanship that creates world-class reined cow horses and rope horses.",
+    youtube: "https://www.youtube.com/@TomMcCutcheon",
+    website: "https://tommccutcheon.com",
+    artwork: ""
+  },
+  {
+    id: 42,
+    title: "That Western Life",
+    host: "Various",
+    type: "vidpod",
+    category: "lifestyle",
+    catLabel: "Lifestyle",
+    emoji: "📹",
+    desc: "Real conversations from real western people. Ropers, ranchers, trainers, and western industry professionals talk about the life, the sport, the culture, and what it means to live western.",
+    youtube: "https://www.youtube.com/@ThatWesternLife",
+    spotify: "https://open.spotify.com/show/thatwesternlife",
+    apple: "https://podcasts.apple.com/thatwesternlife",
+    artwork: ""
+  },
+  {
+    id: 43,
+    title: "Bridle & Bit Podcast",
+    host: "Bridle & Bit Magazine",
+    type: "vidpod",
+    category: "roping",
+    catLabel: "Team Roping",
+    emoji: "📹",
+    desc: "Arizona's premier equestrian magazine goes audio and video — conversations with Arizona's top ropers, trainers, arena owners, and equestrian business leaders. The voice of the Arizona western community since 1978.",
+    website: "https://www.bridleandbit.com",
+    youtube: "https://www.youtube.com/@bridleandbit",
+    artwork: ""
+  },
+];
+
+// ── STATE ──
+let activeType = 'all';
+let activeCat = 'all';
+
+function setType(el, type) {
+  activeType = type;
+  document.querySelectorAll('#typeChips .chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  renderAll();
+}
+function setCat(el, cat) {
+  activeCat = cat;
+  document.querySelectorAll('#catChips .chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  renderAll();
+}
+
+function matchesShow(s) {
+  const q = document.getElementById('searchInput').value.toLowerCase().trim();
+  const typeOk = activeType === 'all' || s.type === activeType;
+  const catOk = activeCat === 'all' || s.category === activeCat;
+  const searchOk = !q || s.title.toLowerCase().includes(q) || s.host.toLowerCase().includes(q) || (s.desc && s.desc.toLowerCase().includes(q)) || s.catLabel.toLowerCase().includes(q);
+  return typeOk && catOk && searchOk;
+}
+
+function typeBadge(type) {
+  if (type === 'video') return '<span class="type-badge type-video">🎬 Video</span>';
+  if (type === 'audio') return '<span class="type-badge type-audio">🎙️ Podcast</span>';
+  if (type === 'vidpod') return '<span class="type-badge type-vidpod">📹 Video Podcast</span>';
+  return '';
+}
+
+function cardLinks(s, small=false) {
+  let html = '';
+  if (s.youtube) html += `<a class="card-link link-yt" href="${s.youtube}" target="_blank" rel="noopener">▶ YouTube</a>`;
+  if (s.spotify) html += `<a class="card-link link-spotify" href="${s.spotify}" target="_blank" rel="noopener">♫ Spotify</a>`;
+  if (s.apple) html += `<a class="card-link link-apple" href="${s.apple}" target="_blank" rel="noopener"> Apple</a>`;
+  if (s.website) html += `<a class="card-link link-web" href="${s.website}" target="_blank" rel="noopener">🌐 Website</a>`;
+  return html;
+}
+
+function featuredCardHTML(s) {
+  const art = s.artwork
+    ? `<img class="featured-art" src="${s.artwork}" alt="${s.title}" loading="lazy">`
+    : `<div class="featured-art" style="display:flex;align-items:center;justify-content:center;font-size:1.8rem;">${s.emoji}</div>`;
+  return `
+<div class="featured-card" onclick="openDetail(${s.id})">
+  <span class="featured-tag">⭐ Featured</span>
+  ${art}
+  <div class="featured-body">
+    <div class="featured-title">${s.title}</div>
+    <div class="featured-host">${s.host}</div>
+    <div class="featured-desc">${s.desc}</div>
+    <div class="card-links">
+      ${typeBadge(s.type)}
+      <span class="cat-badge">${s.catLabel}</span>
+      ${cardLinks(s)}
+    </div>
+  </div>
+</div>`;
+}
+
+function podCardHTML(s) {
+  const art = s.artwork
+    ? `<img class="pod-art" src="${s.artwork}" alt="${s.title}" loading="lazy">`
+    : `<div class="pod-art-emoji">${s.emoji}</div>`;
+  return `
+<div class="pod-card" onclick="openDetail(${s.id})">
+  <div class="pod-card-top">
+    ${art}
+    <div class="pod-info">
+      <div class="pod-title">${s.title}</div>
+      <div class="pod-host">${s.host}</div>
+    </div>
+  </div>
+  <div class="pod-desc">${s.desc}</div>
+  <div class="pod-footer">
+    ${typeBadge(s.type)}
+    <span class="cat-badge">${s.catLabel}</span>
+  </div>
+</div>`;
+}
+
+function renderAll() {
+  const matching = SHOWS.filter(matchesShow);
+  const featured = matching.filter(s => s.featured);
+  const regular = matching.filter(s => !s.featured);
+
+  const fGrid = document.getElementById('featuredGrid');
+  const pGrid = document.getElementById('podcastGrid');
+  const fLabel = document.getElementById('featuredLabel');
+  const rLabel = document.getElementById('regularLabel');
+  const noRes = document.getElementById('noResults');
+  const count = document.getElementById('showingCount');
+
+  fLabel.style.display = featured.length ? '' : 'none';
+  fGrid.style.display = featured.length ? '' : 'none';
+  fGrid.innerHTML = featured.map(featuredCardHTML).join('');
+
+  if (regular.length) {
+    noRes.style.display = 'none';
+    pGrid.innerHTML = regular.map(podCardHTML).join('');
+  } else {
+    pGrid.innerHTML = '';
+    noRes.style.display = 'block';
+    pGrid.appendChild(noRes);
+  }
+
+  rLabel.style.display = matching.length ? '' : 'none';
+
+  const total = matching.length;
+  count.textContent = total === SHOWS.length
+    ? `Showing all ${total} shows & channels`
+    : `Showing ${total} of ${SHOWS.length} shows & channels`;
+
+  document.getElementById('stat-total').textContent = SHOWS.length;
+}
+
+// ── DETAIL ──
+function openDetail(id) {
+  const s = SHOWS.find(x => x.id === id);
+  if (!s) return;
+
+  const art = s.artwork
+    ? `<img class="detail-art" src="${s.artwork}" alt="${s.title}" loading="lazy">`
+    : `<div class="detail-art-emoji">${s.emoji}</div>`;
+
+  let links = '';
+  if (s.youtube) links += `<a class="detail-link" href="${s.youtube}" target="_blank" rel="noopener"><span class="detail-link-icon">▶️</span> Watch on YouTube</a>`;
+  if (s.spotify) links += `<a class="detail-link" href="${s.spotify}" target="_blank" rel="noopener"><span class="detail-link-icon">🎵</span> Listen on Spotify</a>`;
+  if (s.apple) links += `<a class="detail-link" href="${s.apple}" target="_blank" rel="noopener"><span class="detail-link-icon">🎧</span> Listen on Apple Podcasts</a>`;
+  if (s.website) links += `<a class="detail-link" href="${s.website}" target="_blank" rel="noopener"><span class="detail-link-icon">🌐</span> Visit Website</a>`;
+
+  document.getElementById('detailContent').innerHTML = `
+    ${art}
+    <div class="detail-title">${s.title}</div>
+    <div class="detail-host">${s.host}</div>
+    <div class="detail-badges">
+      ${typeBadge(s.type)}
+      <span class="cat-badge">${s.catLabel}</span>
+    </div>
+    <div class="detail-desc">${s.desc}</div>
+    <div class="detail-links">${links}</div>
+  `;
+  document.getElementById('detailOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeDetail(e) {
+  if (e.target === document.getElementById('detailOverlay')) closeDetailBtn();
+}
+function closeDetailBtn() {
+  document.getElementById('detailOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// ── SUBMIT ──
+function openSubmit() { document.getElementById('submitModal').classList.add('open'); }
+function closeSubmit(e) { if (e.target === document.getElementById('submitModal')) closeSubmitBtn(); }
+function closeSubmitBtn() { document.getElementById('submitModal').classList.remove('open'); }
+function submitForm() {
+  const name = document.getElementById('f-name').value.trim();
+  if (!name) { alert('Please enter a show or channel name.'); return; }
+  alert('Thanks for your submission! We\'ll review it within 48 hours and add it to the directory.');
+  closeSubmitBtn();
+}
+
+// ── INIT ──
+renderAll();
+</script>
+</body>
+</html>
